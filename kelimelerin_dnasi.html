@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Kelimelerin DNA'sı</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(to right, #5bc0be, #0b4dbb);
+  font-family: Arial;
+  text-align: center;
+}
+
+.title {
+  font-size: 55px;
+  color: white;
+  margin: 25px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 🔥 CLICK İLE DÖNME */
+.inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.front {
+  background: #111;
+  color: white;
+}
+
+.back {
+  background: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="title">Kelimelerin DNA'sı</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Bulut</div>
+      <div class="back">Bu = Su damlası</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Ceyrek</div>
+      <div class="back">Çar = 4 + Yek = 1</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Sefil</div>
+      <div class="back">Asfalt = Ayak tabanımızla bastığımız Yol</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Tavşan</div>
+      <div class="back">Tabış = Zıplama</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Renk</div>
+      <div class="back">Aynı zamanda Hile demektir.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Kara</div>
+      <div class="back">Kuzey</div>
+    }
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Şırdan</div>
+      <div class="back">Süt</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Akıl</div>
+      <div class="back">İkal = Bağ kurmak</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Sevap</div>
+      <div class="back">Savab = Doğru</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Gebe</div>
+      <div class="back">Gebermek = Şişmek</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">KOD</div>
+      <div class="back">Bilgi Dizisi</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Öksüz</div>
+      <div class="back">Ög = Anne</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Sarhoş</div>
+      <div class="back">Ser = Kafası - Hoş</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Ustalık</div>
+      <div class="back">Uz = Ustalıkla</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Maydanoz</div>
+      <div class="back">Made = Mide, Nevaz = Dost</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Naif</div>
+      <div class="back">Deneyimsiz / Nahif = İnce</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Pati</div>
+      <div class="back">Pa = Ayak</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Sehpa</div>
+      <div class="back">Seh = Üç - Pa = Ayak</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Kardeş</div>
+      <div class="back">Karındaş</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="inner">
+      <div class="front">Asker</div>
+      <div class="back">Sü = Süvari</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".inner").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
+</script>
+
+</body>
+</html>
