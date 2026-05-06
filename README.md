@@ -1,6 +1,3 @@
-from IPython.display import display, HTML
-
-html_content = """
 <!DOCTYPE html>
 <html lang="tr">
 <head>
